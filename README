@@ -1,0 +1,25 @@
+main.c
+*主要调用的文件
+*思路：获得公网ip,获得当前的时间，获得得存在本地的ip,保存新获得的ip,
+*检查新旧的ip是不相同，相同的话休眠，不相同的话发送邮件，最后清除字符串
+
+auto_mail.c
+*get_ip获得公网ip
+*get_time获得当前的时间
+*get_content获得发送的邮件内容
+*send_mail发送邮件到指定的邮箱
+*save_content保存邮件内容到指定目录
+*read_ip读取本地文件获取地址
+*check_ip检查两个ip是否相等
+*clean_str清除字符串
+
+auto_mail.c里面要自行修改的地方
+send_main函数里面user改成自己的邮箱地址
+/your/log/path 修改成你想要保存的目录
+
+注：在linux环境下
+1、已经配置好mail，确保可以发送邮件
+2、已经安装了gcc
+
+编译方法：
+gcc main.c auto_mail.c -o auto_mail
